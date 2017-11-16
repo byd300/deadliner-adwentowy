@@ -1,0 +1,15 @@
+.day-container {
+    background-color: #31b7ba;
+    height: 135px;
+    width: 170px;
+    margin-bottom: 30px;
+}
+.day-container__1-12 {
+    background-image: url(../images/1.12.png);
+}
+.day-container__1-12 {
+    background-image: url(../images/1.12.png);
+}
+.dead-header {
+    background-color: #31b7ba;
+}
