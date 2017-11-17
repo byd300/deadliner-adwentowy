@@ -1,15 +1,61 @@
-.day-container {
+body {
+    background-image: url(../images/background.gif);
+    background-repeat: no-repeat;
+    background-position: top center;
+    font-family: Lato Black, sans-serif;
+    text-transform: uppercase; 
+    color: white;
+}
+.logo {
+    position: relative;
+    left: 10px;
+    top: 35px;
+}
+.deadliner-header {
+    height: 520px;
+    padding: 0;
+}
+
+.copy-in-header {
+    position: relative;
+    top: 200px;
+    height: 220px;
+    background-color: white;
+    border: 4px solid #31b7ba;
+    padding-right: 120px;
+}
+.copy-in-header h1 {
+    color: #31b7ba;
+    font-size: 4.2rem;
+}
+.copy-in-header p {
+    color: #ff5b55;
+    font-size: 2rem;
+}
+.copy-in-header span {
+    font-weight:700;
+}
+
+.container-nopadding {
+    padding: 0;
+}
+
+.day-container {   
     background-color: #31b7ba;
-    height: 135px;
-    width: 170px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    width: 165px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center
 }
-.day-container__1-12 {
-    background-image: url(../images/1.12.png);
+
+.day-container__data-number {
+    font-size: 3.75rem;
 }
-.day-container__1-12 {
-    background-image: url(../images/1.12.png);
+.day-container__data-month {
+    font-size: 1.25rem;
 }
-.dead-header {
-    background-color: #31b7ba;
-}
+
+
