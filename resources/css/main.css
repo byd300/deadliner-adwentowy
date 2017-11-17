@@ -59,3 +59,49 @@ body {
 }
 
 
+/* media queries*/
+
+@media (max-width:1200px) {
+    .copy-in-header {
+        padding: 0;
+    }
+    .copy-in-header h1 {
+        font-size: 3.2rem;
+        text-align: center;
+    }
+    .copy-in-header p {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    .day-container {
+        width: 300px;
+        height: 220px;
+    }
+}
+@media (max-width:992px) {
+    .copy-in-header {
+        padding: 0;
+    }
+    .copy-in-header h1 {
+        font-size: 2.7rem;
+        text-align: center;
+    }
+    .copy-in-header p {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .day-container {
+        width: 345px;
+    }
+}
+@media (max-width:768px) {
+    .day-container {
+        width: 255px;
+    }
+}
+@media (max-width:576px) {
+    .day-container {
+        width: 100%;
+    }
+}
+
