@@ -1,0 +1,120 @@
+@import "mixins";
+@import "extends";
+
+body {
+    background-image: url(../images/background.gif);
+    background-repeat: no-repeat;
+    background-position: top center;
+    text-transform: uppercase; 
+    color: white;
+    @extend .lato;
+}
+
+.deadliner-header {
+    height: 520px;
+    padding: 0;
+    .logo {
+	    position: relative;
+	    left: 10px;
+	    top: 35px;
+	}
+}
+
+.copy-in-header {
+    position: relative;
+    top: 200px;
+    height: 220px;
+    background-color: white;
+    border: 3.5px solid $blue;
+    padding: 50px 150px 0 0;
+    @include lg {
+        padding: 0;
+    }
+    @include md {
+        padding: 0;
+    }
+    h1 {
+	    color: $blue;
+	    font-size: 4.2rem;
+	    font-weight: 400;
+	    @include lg {
+       		font-size: 3.2rem;
+        	text-align: center;
+    	}
+    	@include md {
+	        font-size: 2.7rem;
+        	text-align: center;
+	    }
+	}
+	p {
+	    color: $red;
+	    font-size: 2rem;
+	    font-weight: 400;
+	    @include lg {
+       		font-size: 1.7rem;
+        	text-align: center;
+    	}
+	    @include md {
+	        font-size: 1.5rem;
+        	text-align: center;
+	    }
+	}
+	span {
+	    font-weight: 900;
+	}
+    .red-arm {
+	    position: absolute;
+	    top: -40px;
+	    left: -370px;
+	    z-index: 100;
+	}
+	.team {
+	    position: absolute;
+	    right: -110px;
+	    bottom: 0;
+	}
+}
+
+.container-nopadding {
+    padding: 0;
+}
+.day-container {   
+    background-color: $blue;
+    margin-bottom: 25px;
+    width: 165px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    
+    @include lg {
+        width: 300px;
+        height: 220px;
+    }
+    @include md {
+        width: 345px;
+    }   
+     @include sm {
+        width: 255px;
+    }
+	&__data-number {
+	    font-size: 3.75rem;
+	}
+	@include xs {
+        width: 100%;
+    }
+  
+	&__data-month {
+	    font-size: 1.25rem;
+	}
+}
+
+footer {
+    color: black;
+    font-size: 14px;
+}
+
+
+/* media queries*/
