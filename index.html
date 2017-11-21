@@ -3,18 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
         <title>Czart Deadliner</title>
         <meta name="description" content="Klikaj i uśmiechaj się każdego dnia">
         
         <link rel="icon" href="images/favicon.ico">
-
+        
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/featherlight.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/featherlight.gallery.min.css" />
         
     </head>
  <body>
-
+    <canvas class="snow"></canvas>
     <div class="container deadliner-header">
         <div class="logo">
             <img src="images/logo.png">
@@ -29,82 +30,120 @@
                 <img src="images/red-arm.png">
             </div>
         </div>
-      
     </div>
      
-    <div class="container container-nopadding">
+    <div class="callender container container-nopadding">
         <div class="row">
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-1 day-container day-container__grey">
                     <div class="day-container__data-number">1</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
-            </div>
-            <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                 <div class="day-container">
-                    <div class="day-container__data-number">2</div>
-                    <div class="day-container__data-month">grudnia</div>
+                <div id="img-1" class="adwent-img text-center day-container__yellow">
+                    <a class="thumbnail gallery" href="images/1.png">
+                        <img src="images/1-thumb.png" class="img-fluid" alt="deadliner adwentowy - obrazek 1">
+                    </a>                 
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                 <div class="day-img-2 day-container day-container__grey-medium">
+                    <div class="day-container__data-number">2</div>
+                    <div class="day-container__data-month">grudnia</div>
+                </div>   
+                <div id="img-2" class="adwent-img  text-center day-container__blue">
+                    <a class="thumbnail gallery" href="images/2.png">
+                        <img src="images/2-thumb.png" class="img-fluid" alt="deadliner adwentowy - obrazek 1">
+                    </a>                 
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="day-img-3 day-container day-container__grey-light">
                     <div class="day-container__data-number">3</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
+                <div id="img-3" class="adwent-img text-center day-container__violet">
+                    <a class="thumbnail gallery" href="images/3.png">
+                        <img src="images/3-thumb.png" class="img-fluid" alt="deadliner adwentowy - obrazek 1">
+                    </a>                 
+                </div>
             </div>
              <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-4 day-container day-container__grey">
                     <div class="day-container__data-number">4</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
-            </div>
-            <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
-                    <div class="day-container__data-number">5</div>
-                    <div class="day-container__data-month">grudnia</div>
+                <div id="img-4" class="adwent-img text-center day-container__yellow">
+                    <a class="thumbnail gallery" href="images/4.png">
+                        <img src="images/4-thumb.png" class="img-fluid" alt="deadliner adwentowy - obrazek 1">
+                    </a>                 
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-5 day-container day-container__grey-medium">
+                    <div class="day-container__data-number">5</div>
+                    <div class="day-container__data-month">grudnia</div>
+                </div>
+                <div id="img-5" class="adwent-img text-center day-container__blue">
+                    <a class="thumbnail gallery" href="images/5.png">
+                        <img src="images/5-thumb.png" class="img-fluid" alt="deadliner adwentowy - obrazek 1">
+                    </a>                 
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="day-img-6 cap-on-box">
+                    <img src="images/czapa-lg.png" class="img-rwd" alt="Czapka">
+                </div>
+                <div class="day-container day-container__grey-light">
                     <div class="day-container__data-number">6</div>
                     <div class="day-container__data-month">grudnia</div>
+                </div>
+                <div id="img-6" class="adwent-img text-center day-container__violet">
+                    <a class="thumbnail gallery" href="images/6.png">
+                        <img src="images/6-thumb.png" class="img-fluid" alt="deadliner adwentowy - obrazek 1">
+                    </a>                 
                 </div>
             </div>
         </div>
         
         <div class="row">
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-7 day-container day-container__grey-light">
                     <div class="day-container__data-number">7</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                 <div class="day-container">
+                 <div class="day-img-8 day-container day-container__grey">
                     <div class="day-container__data-number">8</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-9 day-container day-container__grey-medium">
                     <div class="day-container__data-number">9</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
-             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+             <div class="day-img-10 col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="day-img-10 day-container day-container__grey-light">
                     <div class="day-container__data-number">10</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
-            <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+            <div class="day-img-11 col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                 <div class="czart-arm">
+                    <img src="images/czart-arm.png" class="img-fluid img-rwd" alt="Czapka">
+                </div>
+                <div class="day-img-11 day-container day-container__grey">
                     <div class="day-container__data-number">11</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
+                <div class="czart">
+                    <img src="images/czart.png" class="img-fluid img-rwd" alt="Czapka">
+                </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-12 day-container day-container__grey-medium">
                     <div class="day-container__data-number">12</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
@@ -113,37 +152,43 @@
         
         <div class="row">
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="arm">
+                    <img src="images/arm.png" class="img-fluid img-rwd" alt="Czapka">
+                </div>
+                <div class="day-img-13 day-container  day-container__grey">
                     <div class="day-container__data-number">13</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                 <div class="day-container">
+                 <div class="day-img-14 day-container day-container__grey-medium">
                     <div class="day-container__data-number">14</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-15 day-container day-container__grey-light">
                     <div class="day-container__data-number">15</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
              <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="cezar">
+                    <img src="images/cezar.png" class="img-fluid img-rwd" alt="Cezar">
+                </div>
+                <div class="day-img-16 day-container day-container__grey">
                     <div class="day-container__data-number">16</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-17 day-container day-container__grey-medium">
                     <div class="day-container__data-number">17</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-18 day-container day-container__grey-light">
                     <div class="day-container__data-number">18</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
@@ -152,37 +197,37 @@
         
         <div class="row">
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-19 day-container day-container__grey-light">
                     <div class="day-container__data-number">19</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                 <div class="day-container">
+                 <div class="day-img-20 day-container day-container__grey">
                     <div class="day-container__data-number">20</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-21 day-container day-container__grey-medium">
                     <div class="day-container__data-number">21</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
              <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-22 day-container day-container__grey-light">
                     <div class="day-container__data-number">22</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-23 day-container day-container__grey">
                     <div class="day-container__data-number">23</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="day-container">
+                <div class="day-img-24 day-container day-container__grey-medium">
                     <div class="day-container__data-number">24</div>
                     <div class="day-container__data-month">grudnia</div>
                 </div>
@@ -196,10 +241,15 @@
     <footer class="container">
       <p>&copy; CzART 2017</p>
     </footer>
-
+    
     <script src="js/jquery-slim.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-     
+    <script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/jquery.let_it_snow.js"  type="text/javascript" charset="utf-8"></script>
+    <script src="js/main.js"></script>
+  
   </body>
 </html>

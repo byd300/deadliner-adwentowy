@@ -2,7 +2,7 @@
 @import "extends";
 
 body {
-    background-image: url(../images/background.gif);
+    background-image: url(../images/background_02.png);
     background-repeat: no-repeat;
     background-position: top center;
     text-transform: uppercase; 
@@ -37,13 +37,13 @@ body {
 	    color: $blue;
 	    font-size: 4.2rem;
 	    font-weight: 400;
+	   	text-align: center;
 	    @include lg {
        		font-size: 3.2rem;
-        	text-align: center;
+        
     	}
     	@include md {
 	        font-size: 2.7rem;
-        	text-align: center;
 	    }
 	}
 	p {
@@ -70,7 +70,7 @@ body {
 	}
 	.team {
 	    position: absolute;
-	    right: -110px;
+	    right: -75px;
 	    bottom: 0;
 	}
 }
@@ -78,8 +78,66 @@ body {
 .container-nopadding {
     padding: 0;
 }
+
+.callender {
+	padding-top:40px;
+}
+
+.adwent-img {
+	margin-bottom: 25px;
+    width: 165px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    @include lg {
+        width: 300px;
+        height: 220px;
+    }
+    @include md {
+        width: 345px;
+    }   
+     @include sm {
+        width: 255px;
+    }
+    @include xs {
+        width: 100%;
+    }
+    .thumbnail {
+    	img {
+    		@include xlg {
+    			max-height: 130px;
+    		}
+    	}
+    }
+
+}
+
+#img-1 {
+	display: none;
+}
+#img-2 {
+	display: none;
+}
+#img-3 {
+	display: none;
+}
+#img-4 {
+	display: none;
+}
+#img-5 {
+	display: none;
+}
+#img-6 {
+	display: none;
+}
+
+#active {
+	display: inline-block;
+}
+
 .day-container {   
-    background-color: $blue;
     margin-bottom: 25px;
     width: 165px;
     height: 130px;
@@ -87,8 +145,24 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
-    
+    &__grey {
+    	background-color: $grey;
+    }
+    &__grey-medium {
+		background-color: $grey-medium;
+    }
+    &__grey-light {
+		background-color: $grey-light;
+    }
+    &__yellow {
+    	background-color: $yellow;
+    }
+    &__violet {
+    	background-color: $violet;
+    }
+    &__blue {
+    	background-color: $blue;
+    }
     @include lg {
         width: 300px;
         height: 220px;
@@ -101,6 +175,9 @@ body {
     }
 	&__data-number {
 	    font-size: 3.75rem;
+	   	@include sm {
+	        font-size: 5.7rem;
+	    }
 	}
 	@include xs {
         width: 100%;
@@ -108,7 +185,149 @@ body {
   
 	&__data-month {
 	    font-size: 1.25rem;
+	    @include sm {
+	        font-size: 1.5rem;
+	    }
 	}
+}
+
+.day-img-11 {
+	z-index: 5;
+}
+
+.cap-on-box {
+	img {
+		position: absolute;
+		left:90px;
+		bottom:100px;
+		max-width: 150px;
+		@include lg {
+	        max-width: 200px;
+	        left:200px;
+			bottom:170px;
+	    }   
+	    @include md { 
+	        left:250px;
+			bottom:170px;
+	    }   
+	    @include sm { 
+	        left:150px;
+			bottom:170px;
+	    }   
+	    @include xs { 
+	        display: none;
+	    }   
+    }
+}
+
+.arm {
+	img {
+		position: absolute;
+		z-index: 5;
+		bottom:75px;
+		max-width: 45px;
+		@include lg {
+	        max-width: 80px;
+			bottom:70px;
+	    }   
+	    @include md { 
+	       
+			bottom:100px;
+	    }   
+	    @include sm { 
+	    	max-width: 70px; 
+			bottom:100px;
+	    }   
+	    @include xs { 
+	        display: none;
+	    }   
+    }
+}
+
+.cezar {
+	img {
+		position: absolute;
+		bottom: 20px;
+		right: 1px;
+		max-width: 50px;
+		@include lg {
+	        max-width: 80px;
+			bottom:15px;
+	    }   
+	    @include md { 
+	       	right: 10px;
+			bottom:15px;
+	    }   
+	    @include sm { 
+	    	max-width: 75px; 
+			bottom:15px;
+	    }   
+	    @include xs { 
+	        display: none;
+	    }   
+    }
+}
+
+.czart {
+	img {
+		z-index: -1;
+		position: absolute;
+		bottom: 60px;
+		right: 110px;
+		max-width: 120px;
+		@include lg {
+	        max-width: 180px;
+			right: 220px;
+			bottom: 110px;
+	    }   
+	    @include md { 
+	       	right: 270px;
+			bottom: 105px;
+	    }   
+	    @include sm { 
+	    	right: 170px;
+			bottom: 105px;
+	    }   
+	    @include xs { 
+	        display: none;
+	    }   
+    }
+}
+
+.czart-arm {
+	img {
+		position: absolute;
+		bottom: 145px;
+		right: 110px;
+		max-width: 22px;
+		@include lg {
+	      	bottom: 230px;
+			right: 220px;
+			max-width: 35px;
+	    }   
+	    @include md { 
+	       	bottom: 230px;
+			right: 270px;
+			max-width: 35px;
+	    }   
+	    @include sm { 
+	    	bottom: 230px;
+			right: 160px;
+			max-width: 35px;
+	    }   
+	    @include xs { 
+	        display: none;
+	    }   
+    }
+}
+
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 footer {
@@ -116,5 +335,8 @@ footer {
     font-size: 14px;
 }
 
-
-/* media queries*/
+.img-rwd {
+	width: 100%;
+    height: auto;
+    display: block;
+}
