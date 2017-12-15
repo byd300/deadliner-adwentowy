@@ -1,4 +1,5 @@
     
+// -- snowflakes --//
 $(document).ready(function(){
             $('.gallery').featherlightGallery({
                 gallery: {
@@ -33,13 +34,46 @@ $(document).ready(function(){
             count: 500,
             opacity: 0.1,
             color: "#ffffff",
-            windPower: 1,
+            windPower: 1.3,
             image: false
         });
   
-      $("#localization1").click(function(){
-               
-            $(this).addClass('active-map');
-            $('#localization2').removeClass('active-map');
-            setMap(lat1,lng1);
-        });
+
+
+// -- calendar and date  --//
+
+(function() {
+
+  'use strict';
+
+  // date
+
+  var date = new Date(),
+      month = date.getMonth() + 1,
+      day = date.getDate() -10;
+
+
+
+  if (month === 11) {
+
+    for (var i = 0; i <= day; i++) {
+      $('.day-' + i).addClass('active open');
+    }
+
+    var $day = $('.day-' + day);
+
+    $day.on('click', function() {
+      $day.addClass('active');
+    });
+
+  }
+
+
+  $('.day-' + day).on('click', function() {
+    var $this = $(this);
+    if ($this.hasClass('open')) {
+      
+    } 
+  });
+
+})();
