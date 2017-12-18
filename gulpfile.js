@@ -15,6 +15,7 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('css/'))
     gulp.src('src/css/**/*.css')
 		.pipe(concat('style.css'))
+		.pipe(gulp.dest('dist'));
 	gulp.src('src/js/**/*.js')
 		.pipe(concat('final.js'))
 		.pipe(gulp.dest('dist'));
@@ -24,8 +25,8 @@ gulp.task('styles', function() {
 		.pipe(gulp.dest('dist/images'))
 	gulp.src('src/*.html')
 		.pipe(htmlreplace({
-			'css' : 'css/style.css',
-			'js' : 'js/final.js'
+			'css' : 'style.css',
+			'js' : 'final.js'
 		}))
 		.pipe(htmlMin({
 			sortAttributes: true,
@@ -36,10 +37,11 @@ gulp.task('styles', function() {
 });
 
 
-
-
 //Watch task
 gulp.task('default',function() {
+
     gulp.watch('src/sass/**/*.scss',['styles']);
+    gulp.watch('src/css/**/*.css',['styles']);
     gulp.watch('src/js/**/*.js',['styles']);
+    gulp.watch('src/**/*.html',['styles']);
 });
