@@ -1,5 +1,5 @@
-//--------------------------------Do sprawdzenia czy możemy te skrypty wywalić do osobnego pliku
-// -- gallery --//
+
+
 $(document).ready(function(){
     $('.gallery').featherlightGallery({
         gallery: {
@@ -18,7 +18,7 @@ $(document).ready(function(){
     });
 });
 
-// -- snowflakes --//
+
 (function(i,s,o,g,r,a,m){i['']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -35,10 +35,10 @@ $("canvas.snow").let_it_snow({
     image: false
 });
 
-// -- calendar and date  --//
+
 (function() {
     'use strict';
-    // date
+   
     var date = new Date(),
         month = date.getMonth() + 1,
         day = date.getDate() ;

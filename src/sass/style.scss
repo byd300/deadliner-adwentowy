@@ -2,12 +2,12 @@
 @import "extends";
 
 body {
-    background-image:  url(images/background.gif);
-    background-repeat: no-repeat;
-    background-position: top center;
-    text-transform: uppercase; 
-    color: white;
-    @extend .lato;
+  background-image: url(images/background.gif);
+  background-repeat: no-repeat;
+  background-position: top center;
+  text-transform: uppercase;
+  color: white; }
+  @extend .lato;
 }
 
 

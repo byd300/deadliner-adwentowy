@@ -5,6 +5,8 @@ const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
 var htmlreplace = require('gulp-html-replace');
 var htmlMin = require('gulp-htmlmin');
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload();
 
 gulp.task('styles', function() {
     gulp.src('sass/**/*.scss')
@@ -39,9 +41,13 @@ gulp.task('styles', function() {
 
 //Watch task
 gulp.task('default',function() {
+	//BrowserSync
+	browserSync.init({
+	    server: "src"
+	}) 
 
-    gulp.watch('src/sass/**/*.scss',['styles']);
-    gulp.watch('src/css/**/*.css',['styles']);
-    gulp.watch('src/js/**/*.js',['styles']);
-    gulp.watch('src/**/*.html',['styles']);
+    gulp.watch('src/sass/**/*.scss',['styles']).on('change', browserSync.reload);
+    gulp.watch('src/css/**/*.css',['styles']).on('change', browserSync.reload);
+    gulp.watch('src/js/**/*.js',['styles']).on('change', browserSync.reload);
+    gulp.watch('src/**/*.html',['styles']).on('change', browserSync.reload);
 });
