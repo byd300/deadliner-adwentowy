@@ -1,4 +1,47 @@
 
+(function() {
+    'use strict';
+   
+    var date = new Date(),
+        month = date.getMonth() + 1,
+        day = date.getDate() ;
+
+    if (month === 1,2,3,4,5,6,7,8,9,10,11,12) {
+        for (var i = 0; i <= day; i++) {
+            $('.day-' + i).addClass('active open');
+        }
+        var $day = $('.day-' + day);
+        $day.on('click', function() {
+            $day.addClass('active');
+        });
+    }
+ 
+    $('.active').on('click', function() {
+        var $this = $(this);
+
+        if ($this.hasClass('open')) {   
+        } else {
+            $this.addClass('open');
+        }
+    });
+
+    $('.day-' + day).on('click', function() {
+        var $this = $(this);
+        if ($this.hasClass('iner')) { 
+        } else {
+            $this.addClass('wobble-hor-top');
+        } 
+    });
+
+    $(document).ready(function(){    
+        $day.addClass("wobble-hor-top");
+        $day.hover(function() {
+            if ($day.hasClass('wobble-hor-top')) {
+                $day.removeClass('wobble-hor-top');
+            }
+        });
+    });
+})();
 
 $(document).ready(function(){
     $('.gallery').featherlightGallery({
@@ -35,47 +78,3 @@ $("canvas.snow").let_it_snow({
     image: false
 });
 
-
-(function() {
-    'use strict';
-   
-    var date = new Date(),
-        month = date.getMonth() + 1,
-        day = date.getDate() ;
-
-    if (month === 12) {
-        for (var i = 0; i <= day; i++) {
-            $('.day-' + i).addClass('active open');
-        }
-        var $day = $('.day-' + day);
-        $day.on('click', function() {
-            $day.addClass('active');
-        });
-    }
-
-    $('.active').on('click', function() {
-        var $this = $(this);
-
-        if ($this.hasClass('open')) {   
-        } else {
-            $this.addClass('open');
-        }
-    });
-
-    $('.day-' + day).on('click', function() {
-        var $this = $(this);
-        if ($this.hasClass('iner')) { 
-        } else {
-            $this.addClass('wobble-hor-top');
-        } 
-    });
-
-    $(document).ready(function(){    
-        $day.addClass("wobble-hor-top");
-        $day.hover(function() {
-            if ($day.hasClass('wobble-hor-top')) {
-                $day.removeClass('wobble-hor-top');
-            }
-        });
-    });
-})();

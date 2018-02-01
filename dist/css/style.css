@@ -51,7 +51,7 @@
   text-align: center; }
 
 body {
-  background-image: url(images/background.gif);
+  background-image: url(../images/background.gif);
   background-repeat: no-repeat;
   background-position: top center;
   text-transform: uppercase;
@@ -213,9 +213,6 @@ body {
   margin-bottom: 25px;
   width: 165px;
   height: 130px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center; }
 
 .day-container__grey {
@@ -270,28 +267,34 @@ body {
 .day-img-11 {
   z-index: 5; }
 
+.day-img-13 {
+  z-index: 6; }
+
+.day-img-15 {
+  z-index: 7; }
+
 .cap-on-box img {
   position: absolute;
   left: 90px;
   z-index: 7;
-  bottom: 100px;
-  max-width: 150px; }
+  bottom: 80px; }
 
 @media (max-width: 1200px) {
   .cap-on-box img {
+    bottom: 290px;
     max-width: 200px;
     left: 200px;
-    bottom: 170px; } }
+    position: relative; } }
 
 @media (max-width: 992px) {
   .cap-on-box img {
-    left: 250px;
-    bottom: 170px; } }
+    bottom: 290px;
+    left: 250px; } }
 
 @media (max-width: 768px) {
   .cap-on-box img {
-    left: 150px;
-    bottom: 170px; } }
+    bottom: 290px;
+    left: 150px; } }
 
 @media (max-width: 576px) {
   .cap-on-box img {
@@ -299,23 +302,34 @@ body {
 
 .arm img {
   position: absolute;
-  z-index: 5;
-  bottom: 75px;
-  max-width: 45px; }
+  left: 0px;
+  z-index: 40;
+  bottom: 70px;
+  max-width: 39px; }
 
 @media (max-width: 1200px) {
   .arm img {
-    max-width: 80px;
-    bottom: 70px; } }
+    bottom: 290px;
+    max-width: 200px;
+    left: -121px;
+    position: relative;
+    max-width: 60px; } }
 
 @media (max-width: 992px) {
   .arm img {
-    bottom: 100px; } }
+    bottom: 290px;
+    max-width: 200px;
+    left: -142px;
+    position: relative;
+    max-width: 60px; } }
 
 @media (max-width: 768px) {
   .arm img {
-    max-width: 70px;
-    bottom: 100px; } }
+    bottom: 290px;
+    max-width: 200px;
+    left: -98px;
+    position: relative;
+    max-width: 60px; } }
 
 @media (max-width: 576px) {
   .arm img {
@@ -323,25 +337,32 @@ body {
 
 .cezar img {
   position: absolute;
-  bottom: 20px;
-  z-index: 6;
-  right: 1px;
-  max-width: 50px; }
+  left: 130px;
+  z-index: 40;
+  bottom: -5px;
+  max-width: 45px; }
 
 @media (max-width: 1200px) {
   .cezar img {
-    max-width: 80px;
-    bottom: 15px; } }
+    bottom: 170px;
+    max-width: 200px;
+    position: relative;
+    max-width: 75px; } }
 
 @media (max-width: 992px) {
   .cezar img {
-    right: 10px;
-    bottom: 15px; } }
+    bottom: 170px;
+    max-width: 200px;
+    position: relative;
+    max-width: 75px; } }
 
 @media (max-width: 768px) {
   .cezar img {
+    bottom: 170px;
+    max-width: 200px;
+    position: relative;
     max-width: 75px;
-    bottom: 15px; } }
+    left: 110px; } }
 
 @media (max-width: 576px) {
   .cezar img {
@@ -375,29 +396,29 @@ body {
     display: none; } }
 
 .czart-arm img {
-  z-index: 20;
   position: absolute;
-  bottom: 145px;
-  right: 110px;
+  left: 40px;
+  z-index: 4;
+  bottom: 120px;
   max-width: 22px; }
 
 @media (max-width: 1200px) {
   .czart-arm img {
-    bottom: 230px;
-    right: 220px;
-    max-width: 35px; } }
+    bottom: 240px;
+    max-width: 200px;
+    left: -60px;
+    position: relative;
+    max-width: 32px; } }
 
 @media (max-width: 992px) {
   .czart-arm img {
-    bottom: 230px;
-    right: 270px;
-    max-width: 35px; } }
+    bottom: 240px;
+    left: -90px; } }
 
 @media (max-width: 768px) {
   .czart-arm img {
-    bottom: 230px;
-    right: 160px;
-    max-width: 35px; } }
+    bottom: 240px;
+    left: -50px; } }
 
 @media (max-width: 576px) {
   .czart-arm img {
@@ -496,7 +517,6 @@ figure {
   height: 130px;
   left: 0;
   overflow: hidden;
-  position: absolute;
   top: 0;
   width: 100%; }
 
@@ -776,6 +796,26 @@ figure {
     transform: translateZ(160px); } }
 
 @keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px); } }
+
+.slide-fwd-center-element:hover {
+  -webkit-animation: slide-fwd-center-element 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-fwd-center-element 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+@-webkit-keyframes slide-fwd-center-element {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px); } }
+
+@keyframes slide-fwd-center-element {
   0% {
     -webkit-transform: translateZ(0);
     transform: translateZ(0); }

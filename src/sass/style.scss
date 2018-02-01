@@ -2,12 +2,13 @@
 @import "extends";
 
 body {
-  background-image: url(images/background.gif);
+  background-image: url(../images/background.gif);
   background-repeat: no-repeat;
   background-position: top center;
   text-transform: uppercase;
-  color: white; }
+  color: white; 
   @extend .lato;
+
 }
 
 
@@ -65,33 +66,31 @@ body {
 	        text-align: center;
 	    }
 	     @include xs {
-	    	
 	        top: 20px;
-	       
 	    }
 	}
 	p {
 		position: absolute;
 		top: 125px;
 		left: 170px;
-	    color: $red;
-	    font-size: 2.1rem;
-	    font-weight: 400;
-	    @include lg {
-       		font-size: 1.8rem;
-        	left: 110px;
-        	top: 115px;
-    	}
-	    @include md {
-	        font-size: 1.5rem;
-        	top:110px;
-	    	left: 30px;
-	    }
-	     @include sm {
-	    	
-	        top: 115px;
-	        text-align: center;
-	    }
+    color: $red;
+    font-size: 2.1rem;
+    font-weight: 400;
+    @include lg {
+     		font-size: 1.8rem;
+      	left: 110px;
+      	top: 115px;
+  	}
+    @include md {
+        font-size: 1.5rem;
+      	top:110px;
+    	left: 30px;
+    }
+     @include sm {
+    	
+        top: 115px;
+        text-align: center;
+    }
 	}
 	span {
 	    font-weight: 900;
@@ -100,16 +99,15 @@ body {
 	    position: absolute;
 	    top: -15px;
 	    left: -280px;
-	    
 	    width: 695px;
 	}
 	.team {
-	    position: absolute;
-	    right: -75px;
-	    bottom: 0;
-	    @include sm {
-	    	display: none;
-	    }
+    position: absolute;
+    right: -75px;
+    bottom: 0;
+    @include sm {
+    	display: none;
+    }
 	}
 }
 
@@ -133,42 +131,41 @@ body {
 
 .adwent-img {
 	margin-bottom: 25px;
-    width: 165px;
-    height: 130px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    @include lg {
-        width: 300px;
-        height: 220px;
-    }
-    @include md {
-        width: 345px;
-    }   
-     @include sm {
-        width: 255px;
-    }
-    @include xs {
-        width: 100%;
-    }
-    .thumbnail {
-    	img {
-    		@include xlg {
-    			max-height: 130px;
-    		}
-    	}
-    }
-
+  width: 165px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  @include lg {
+      width: 300px;
+      height: 220px;
+  }
+  @include md {
+      width: 345px;
+  }   
+   @include sm {
+      width: 255px;
+  }
+  @include xs {
+      width: 100%;
+  }
+  .thumbnail {
+  	img {
+  		@include xlg {
+  			max-height: 130px;
+  		}
+  	}
+  }
 }
 
 .day-container {   
     margin-bottom: 25px;
     width: 165px;
     height: 130px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
     text-align: center;
     &__grey {
     	background-color: $grey;
@@ -199,25 +196,30 @@ body {
         width: 255px;
     }
 	&__data-number {
-	    font-size: 3.75rem;
-	   	@include sm {
-	        font-size: 5.7rem;
-	    }
+    font-size: 3.75rem;
+   	@include sm {
+        font-size: 5.7rem;
+    }
 	}
 	@include xs {
         width: 100%;
     }
-  
 	&__data-month {
-	    font-size: 1.25rem;
-	    @include sm {
-	        font-size: 1.5rem;
-	    }
+    font-size: 1.25rem;
+    @include sm {
+        font-size: 1.5rem;
+    }
 	}
 }
 
 .day-img-11 {
 	z-index: 5;
+}
+.day-img-13 {
+  z-index: 6;
+}
+.day-img-15 {
+  z-index: 7;
 }
 
 .cap-on-box {
@@ -225,128 +227,145 @@ body {
 		position: absolute;
 		left:90px;
 		z-index: 7;
-		bottom:100px;
-		max-width: 150px;
+		bottom: 80px;
 		@include lg {
-	        max-width: 200px;
-	        left:200px;
-			bottom:170px;
-	    }   
-	    @include md { 
-	        left:250px;
-			bottom:170px;
-	    }   
-	    @include sm { 
-	        left:150px;
-			bottom:170px;
-	    }   
-	    @include xs { 
-	        display: none;
-	    }   
-    }
+      bottom: 290px;
+	    max-width: 200px;
+	    left:200px;
+      position: relative;
+	  }   
+    @include md { 
+      bottom: 290px;
+      left:250px;
+    }   
+    @include sm { 
+      bottom: 290px;
+      left:150px;
+    }   
+    @include xs { 
+        display: none;
+    }   
+  }
 }
 
 .arm {
 	img {
-		position: absolute;
-		z-index: 5;
-		bottom:75px;
-		max-width: 45px;
-		@include lg {
-	        max-width: 80px;
-			bottom:70px;
-	    }   
-	    @include md { 
-	       
-			bottom:100px;
-	    }   
-	    @include sm { 
-	    	max-width: 70px; 
-			bottom:100px;
-	    }   
-	    @include xs { 
-	        display: none;
-	    }   
-    }
+    position: absolute;
+    left:0px;
+    z-index: 40;
+    bottom: 70px;
+    max-width:39px;
+    @include lg {
+        bottom: 290px;
+        max-width: 200px;
+        left: -121px;
+        position: relative;
+        max-width: 60px;
+    }   
+    @include md { 
+       bottom: 290px;
+        max-width: 200px;
+        left: -142px;
+        position: relative;
+        max-width: 60px;
+    }   
+    @include sm { 
+       bottom: 290px;
+        max-width: 200px;
+        left: -98px;
+        position: relative;
+        max-width: 60px;
+    }   
+    @include xs { 
+        display: none;
+    }   
+  }
 }
 
 .cezar {
 	img {
-		position: absolute;
-		bottom: 20px;
-		z-index: 6;
-		right: 1px;
-		max-width: 50px;
-		@include lg {
-	        max-width: 80px;
-			bottom:15px;
-	    }   
-	    @include md { 
-	       	right: 10px;
-			bottom:15px;
-	    }   
-	    @include sm { 
-	    	max-width: 75px; 
-			bottom:15px;
-	    }   
-	    @include xs { 
-	        display: none;
-	    }   
-    }
+    position: absolute;
+    left: 130px;
+    z-index: 40;
+    bottom: -5px;
+    max-width: 45px;
+    @include lg {
+      bottom: 170px;
+      max-width: 200px; 
+      position: relative;
+      max-width: 75px;
+    }   
+    @include md { 
+      bottom: 170px;
+      max-width: 200px; 
+      position: relative;
+      max-width: 75px;
+    }   
+    @include sm { 
+      bottom: 170px;
+      max-width: 200px; 
+      position: relative;
+      max-width: 75px;
+      left: 110px;
+    }   
+    @include xs { 
+      display: none;
+    }   
+  }
 }
 
 .czart {
 	img {
-		z-index: -1;
-		position: absolute;
-		bottom: 60px;
-		right: 110px;
-		max-width: 120px;
-		@include lg {
-	        max-width: 180px;
-			right: 220px;
-			bottom: 110px;
-	    }   
-	    @include md { 
-	       	right: 270px;
-			bottom: 105px;
-	    }   
-	    @include sm { 
-	    	right: 170px;
-			bottom: 105px;
-	    }   
-	    @include xs { 
-	        display: none;
-	    }   
-    }
+  	z-index: -1;
+  	position: absolute;
+  	bottom: 60px;
+  	right: 110px;
+  	max-width: 120px;
+	@include lg {
+     max-width: 180px;
+		 right: 220px;
+		 bottom: 110px;
+    }   
+    @include md { 
+     right: 270px;
+		 bottom: 105px;
+    }   
+    @include sm { 
+     right: 170px;
+		 bottom: 105px;
+    }   
+    @include xs { 
+     display: none;
+    }   
+  }
 }
 
 .czart-arm {
 	img {
-		z-index:20;
-		position: absolute;
-		bottom: 145px;
-		right: 110px;
-		max-width: 22px;
-		@include lg {
-	      	bottom: 230px;
-			right: 220px;
-			max-width: 35px;
-	    }   
-	    @include md { 
-	       	bottom: 230px;
-			right: 270px;
-			max-width: 35px;
-	    }   
-	    @include sm { 
-	    	bottom: 230px;
-			right: 160px;
-			max-width: 35px;
-	    }   
-	    @include xs { 
-	        display: none;
-	    }   
-    }
+      position: absolute;
+      left:40px;
+      z-index: 4;
+      bottom: 120px;
+      max-width:22px;
+    @include lg {
+      bottom: 240px;
+      max-width: 200px;
+      left:-60px;
+      position: relative;
+      max-width:32px;
+    }   
+    @include md { 
+      bottom: 240px;
+      left:-90px;
+    }   
+    @include sm { 
+      bottom: 240px;
+      left:-50px;
+    }   
+    @include xs { 
+        display: none;
+    }   
+  }
 }
 
 
@@ -366,8 +385,8 @@ footer {
 
 .img-rwd {
 	width: 100%;
-    height: auto;
-    display: block;
+  height: auto;
+  display: block;
 }
 
 .img-fluid {
@@ -381,27 +400,22 @@ footer {
 
 
 @mixin clearfix() {
-
   &:before,
   &:after {
     content: ' ';
     display: table;
   }
-
   &:after {
     clear: both;
   }
-
 }
 
 * {
   box-sizing: border-box;
-
   &:before,
   &:after {
     box-sizing: border-box;
   }
-
 }
 
 
@@ -417,7 +431,7 @@ figure {
 	perspective: 1600px;
 	border: none;
 	@include lg {
-	    margin-bottom: 120px;
+	  margin-bottom: 120px;
 	}
   &.active {
     cursor: pointer;
@@ -425,7 +439,7 @@ figure {
 
   &.open {
     figcaption {
-      	transform: scale(0);
+      transform: scale(0);
     }
   }
 
@@ -454,7 +468,6 @@ figure {
         width: 100%;
     }
   
-
     &:after {
       backface-visibility: hidden;
       background-color: $grey;
@@ -473,7 +486,7 @@ figure {
     height: 130px;
     left: 0;
     overflow: hidden;
-    position: absolute;
+    // position: absolute;
     top: 0;
     width: 100%;
     @include lg {
@@ -489,17 +502,17 @@ figure {
 	&__data-number {
 	    font-size: 3.75rem;
 	   	@include sm {
-	        font-size: 5.7rem;
+	      font-size: 5.7rem;
 	    }
 	}
 	@include xs {
-        width: 100%;
+      width: 100%;
     }
   
 	&__data-month {
 	    font-size: 1.25rem;
 	    @include sm {
-	        font-size: 1.5rem;
+	      font-size: 1.5rem;
 	    }
 	}
    }	
@@ -523,7 +536,6 @@ figure {
 
 .card-w-2 {
   width: (100vw / 3);
-
   @media (max-width: 768px) {
     width: (100vw / 1.5);
   }
@@ -532,36 +544,34 @@ figure {
 
 .card-h-2 {
   height: (100vw / 3);
-
   @media (max-width: 768px) {
     height: (100vw / 1.5);
   }
-
 }
 
 .card-grey {
 	figcaption {
 		background-color: $grey;
-	&:after {
-  		background-color: $grey;
-	}
+  	&:after {
+    		background-color: $grey;
+  	}
 	}
 }
 .card-grey-medium {
 	figcaption {
 		background-color: $grey-medium;
-	&:after {
-  		background-color: $grey-medium;
-	}
+  	&:after {
+    		background-color: $grey-medium;
+  	}
 	}
 }
 
 .card-grey-light {
 	figcaption {
 		background-color: $grey-light;
-	&:after {
-  		background-color: $grey-light;
-	}
+  	&:after {
+    		background-color: $grey-light;
+  	}
 	}
 }
 
@@ -587,19 +597,16 @@ figure {
 
 @keyframes snow { 
     0% { background-position: 0px 0px, 0px 0px, 0px 0px }
-
     100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
 }
 
 @-moz-keyframes snow { 
     0% { background-position: 0px 0px, 0px 0px, 0px 0px }
-
     100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
 }
 
 @-webkit-keyframes snow { 
     0% { background-position: 0px 0px, 0px 0px, 0px 0px }
-
     100% {
         background-position: 500px 1000px, 400px 400px, 300px 300px;
     }
@@ -607,7 +614,6 @@ figure {
 
 @-ms-keyframes snow { 
     0% { background-position: 0px 0px, 0px 0px, 0px 0px }
-
     100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
 }
 
@@ -765,92 +771,119 @@ figure {
 
 .wobble-hor-top {
 	-webkit-animation: wobble-hor-top 1.2s 1s infinite both;
-	        animation: wobble-hor-top 1.2s 1s infinite both;
+	animation: wobble-hor-top 1.2s 1s infinite both;
 }
 
 @-webkit-keyframes wobble-hor-top {
   0%,
   100% {
     -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
     -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
   }
   15% {
     -webkit-transform: translateX(-30px) rotate(6deg);
-            transform: translateX(-30px) rotate(6deg);
+    transform: translateX(-30px) rotate(6deg);
   }
   30% {
     -webkit-transform: translateX(15px) rotate(-6deg);
-            transform: translateX(15px) rotate(-6deg);
+    transform: translateX(15px) rotate(-6deg);
   }
   45% {
     -webkit-transform: translateX(-15px) rotate(3.6deg);
-            transform: translateX(-15px) rotate(3.6deg);
+    transform: translateX(-15px) rotate(3.6deg);
   }
   60% {
     -webkit-transform: translateX(9px) rotate(-2.4deg);
-            transform: translateX(9px) rotate(-2.4deg);
+    transform: translateX(9px) rotate(-2.4deg);
   }
   75% {
     -webkit-transform: translateX(-6px) rotate(1.2deg);
-            transform: translateX(-6px) rotate(1.2deg);
+    transform: translateX(-6px) rotate(1.2deg);
   }
 }
 @keyframes wobble-hor-top {
   0%,
   100% {
     -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
     -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
   }
   15% {
     -webkit-transform: translateX(-30px) rotate(6deg);
-            transform: translateX(-30px) rotate(6deg);
+    transform: translateX(-30px) rotate(6deg);
   }
   30% {
     -webkit-transform: translateX(15px) rotate(-6deg);
-            transform: translateX(15px) rotate(-6deg);
+    transform: translateX(15px) rotate(-6deg);
   }
   45% {
     -webkit-transform: translateX(-15px) rotate(3.6deg);
-            transform: translateX(-15px) rotate(3.6deg);
+    transform: translateX(-15px) rotate(3.6deg);
   }
   60% {
     -webkit-transform: translateX(9px) rotate(-2.4deg);
-            transform: translateX(9px) rotate(-2.4deg);
+    transform: translateX(9px) rotate(-2.4deg);
   }
   75% {
     -webkit-transform: translateX(-6px) rotate(1.2deg);
-            transform: translateX(-6px) rotate(1.2deg);
+    transform: translateX(-6px) rotate(1.2deg);
   }
 }
 
 
 .slide-fwd-center:hover {
 	-webkit-animation: slide-fwd-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-fwd-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-fwd-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @-webkit-keyframes slide-fwd-center {
   0% {
     -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    transform: translateZ(0);
   }
   100% {
     -webkit-transform: translateZ(160px);
-            transform: translateZ(160px);
+    transform: translateZ(160px);
   }
 }
 @keyframes slide-fwd-center {
   0% {
     -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    transform: translateZ(0);
   }
   100% {
     -webkit-transform: translateZ(160px);
-            transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}
+
+
+.slide-fwd-center-element:hover {
+  -webkit-animation: slide-fwd-center-element 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-fwd-center-element 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-fwd-center-element {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}
+@keyframes slide-fwd-center-element {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
   }
 }
 
@@ -1452,64 +1485,64 @@ figure {
 }
 @keyframes gwd-gen-mzgbgwdanimation_gwd-keyframes {
     0% {
-        opacity: 0;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     96.92% {
-        opacity: 0;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     98.46% {
-        opacity: 1;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 1;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     100% {
-        opacity: 0;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
 }
 @-webkit-keyframes gwd-gen-mzgbgwdanimation_gwd-keyframes {
     0% {
-        opacity: 0;
-        -webkit-animation-timing-function: linear;
+      opacity: 0;
+      -webkit-animation-timing-function: linear;
     }
     96.92% {
-        opacity: 0;
-        -webkit-animation-timing-function: linear;
+      opacity: 0;
+      -webkit-animation-timing-function: linear;
     }
     98.46% {
-        opacity: 1;
-        -webkit-animation-timing-function: linear;
+      opacity: 1;
+      -webkit-animation-timing-function: linear;
     }
     100% {
-        opacity: 0;
-        -webkit-animation-timing-function: linear;
+      opacity: 0;
+      -webkit-animation-timing-function: linear;
     }
 }
 @-moz-keyframes gwd-gen-mzgbgwdanimation_gwd-keyframes {
     0% {
-        opacity: 0;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      -moz-animation-timing-function: linear;
     }
     96.92% {
-        opacity: 0;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      -moz-animation-timing-function: linear;
     }
     98.46% {
-        opacity: 1;
-        -moz-animation-timing-function: linear;
+      opacity: 1;
+      -moz-animation-timing-function: linear;
     }
     100% {
-        opacity: 0;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      -moz-animation-timing-function: linear;
     }
 }
 .htmlNoPages .gwd-gen-mzgbgwdanimation {
@@ -1519,64 +1552,64 @@ figure {
 }
 @keyframes gwd-gen-1v0wgwdanimation_gwd-keyframes {
     0% {
-        opacity: 1;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 1;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     92.59% {
-        opacity: 1;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 1;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     96.3% {
-        opacity: 0;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     100% {
-        opacity: 1;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 1;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
 }
 @-webkit-keyframes gwd-gen-1v0wgwdanimation_gwd-keyframes {
     0% {
-        opacity: 1;
-        -webkit-animation-timing-function: linear;
+      opacity: 1;
+      -webkit-animation-timing-function: linear;
     }
     92.59% {
-        opacity: 1;
-        -webkit-animation-timing-function: linear;
+      opacity: 1;
+      -webkit-animation-timing-function: linear;
     }
     96.3% {
-        opacity: 0;
-        -webkit-animation-timing-function: linear;
+      opacity: 0;
+      -webkit-animation-timing-function: linear;
     }
     100% {
-        opacity: 1;
-        -webkit-animation-timing-function: linear;
+      opacity: 1;
+      -webkit-animation-timing-function: linear;
     }
 }
 @-moz-keyframes gwd-gen-1v0wgwdanimation_gwd-keyframes {
     0% {
-        opacity: 1;
-        -moz-animation-timing-function: linear;
+      opacity: 1;
+      -moz-animation-timing-function: linear;
     }
     92.59% {
-        opacity: 1;
-        -moz-animation-timing-function: linear;
+      opacity: 1;
+      -moz-animation-timing-function: linear;
     }
     96.3% {
-        opacity: 0;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      -moz-animation-timing-function: linear;
     }
     100% {
-        opacity: 1;
-        -moz-animation-timing-function: linear;
+      opacity: 1;
+      -moz-animation-timing-function: linear;
     }
 }
 .htmlNoPages .gwd-gen-1v0wgwdanimation {
@@ -1597,106 +1630,106 @@ figure {
 }
 @keyframes gwd-gen-19zkgwdanimation_gwd-keyframes {
     0% {
-        opacity: 0;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     22.22% {
-        opacity: 0;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     23.61% {
-        opacity: 1;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 1;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     25% {
-        opacity: 0;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     97.22% {
-        opacity: 0;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     98.61% {
-        opacity: 1;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 1;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     100% {
-        opacity: 0;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
 }
 @-webkit-keyframes gwd-gen-19zkgwdanimation_gwd-keyframes {
     0% {
-        opacity: 0;
-        -webkit-animation-timing-function: linear;
+      opacity: 0;
+      -webkit-animation-timing-function: linear;
     }
     22.22% {
-        opacity: 0;
-        -webkit-animation-timing-function: linear;
+      opacity: 0;
+      -webkit-animation-timing-function: linear;
     }
     23.61% {
-        opacity: 1;
-        -webkit-animation-timing-function: linear;
+      opacity: 1;
+      -webkit-animation-timing-function: linear;
     }
     25% {
-        opacity: 0;
-        -webkit-animation-timing-function: linear;
+      opacity: 0;
+      -webkit-animation-timing-function: linear;
     }
     97.22% {
-        opacity: 0;
-        -webkit-animation-timing-function: linear;
+      opacity: 0;
+      -webkit-animation-timing-function: linear;
     }
     98.61% {
-        opacity: 1;
-        -webkit-animation-timing-function: linear;
+      opacity: 1;
+      -webkit-animation-timing-function: linear;
     }
     100% {
-        opacity: 0;
-        -webkit-animation-timing-function: linear;
+      opacity: 0;
+      -webkit-animation-timing-function: linear;
     }
 }
 @-moz-keyframes gwd-gen-19zkgwdanimation_gwd-keyframes {
     0% {
-        opacity: 0;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      -moz-animation-timing-function: linear;
     }
     22.22% {
-        opacity: 0;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      -moz-animation-timing-function: linear;
     }
     23.61% {
-        opacity: 1;
-        -moz-animation-timing-function: linear;
+      opacity: 1;
+      -moz-animation-timing-function: linear;
     }
     25% {
-        opacity: 0;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      -moz-animation-timing-function: linear;
     }
     97.22% {
-        opacity: 0;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      -moz-animation-timing-function: linear;
     }
     98.61% {
-        opacity: 1;
-        -moz-animation-timing-function: linear;
+      opacity: 1;
+      -moz-animation-timing-function: linear;
     }
     100% {
-        opacity: 0;
-        -moz-animation-timing-function: linear;
+      opacity: 0;
+      -moz-animation-timing-function: linear;
     }
 }
 .htmlNoPages .gwd-gen-19zkgwdanimation {
@@ -1722,138 +1755,138 @@ figure {
 }
 @keyframes gwd-gen-sz7ggwdanimation_gwd-keyframes {
     0% {
-        transform: rotateZ(0deg);
-        -webkit-transform: rotateZ(0deg);
-        -moz-transform: rotateZ(0deg);
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      transform: rotateZ(0deg);
+      -webkit-transform: rotateZ(0deg);
+      -moz-transform: rotateZ(0deg);
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     13.89% {
-        transform: rotateZ(0deg);
-        -webkit-transform: rotateZ(0deg);
-        -moz-transform: rotateZ(0deg);
-        animation-timing-function: ease-in;
-        -webkit-animation-timing-function: ease-in;
-        -moz-animation-timing-function: ease-in;
+      transform: rotateZ(0deg);
+      -webkit-transform: rotateZ(0deg);
+      -moz-transform: rotateZ(0deg);
+      animation-timing-function: ease-in;
+      -webkit-animation-timing-function: ease-in;
+      -moz-animation-timing-function: ease-in;
     }
     22.22% {
-        transform: rotateZ(-9.90424deg);
-        -webkit-transform: rotateZ(-9.90424deg);
-        -moz-transform: rotateZ(-9.90424deg);
-        animation-timing-function: ease-out;
-        -webkit-animation-timing-function: ease-out;
-        -moz-animation-timing-function: ease-out;
+      transform: rotateZ(-9.90424deg);
+      -webkit-transform: rotateZ(-9.90424deg);
+      -moz-transform: rotateZ(-9.90424deg);
+      animation-timing-function: ease-out;
+      -webkit-animation-timing-function: ease-out;
+      -moz-animation-timing-function: ease-out;
     }
     30.56% {
-        transform: rotateZ(0deg);
-        -webkit-transform: rotateZ(0deg);
-        -moz-transform: rotateZ(0deg);
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      transform: rotateZ(0deg);
+      -webkit-transform: rotateZ(0deg);
+      -moz-transform: rotateZ(0deg);
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     38.89% {
-        transform: rotateZ(-3.97338deg);
-        -webkit-transform: rotateZ(-3.97338deg);
-        -moz-transform: rotateZ(-3.97338deg);
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      transform: rotateZ(-3.97338deg);
+      -webkit-transform: rotateZ(-3.97338deg);
+      -moz-transform: rotateZ(-3.97338deg);
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     50% {
-        transform: rotateZ(0deg);
-        -webkit-transform: rotateZ(0deg);
-        -moz-transform: rotateZ(0deg);
-        animation-timing-function: ease-in-out;
-        -webkit-animation-timing-function: ease-in-out;
-        -moz-animation-timing-function: ease-in-out;
+      transform: rotateZ(0deg);
+      -webkit-transform: rotateZ(0deg);
+      -moz-transform: rotateZ(0deg);
+      animation-timing-function: ease-in-out;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
     }
     61.11% {
-        transform: rotateZ(-9.06581deg);
-        -webkit-transform: rotateZ(-9.06581deg);
-        -moz-transform: rotateZ(-9.06581deg);
-        animation-timing-function: ease-out;
-        -webkit-animation-timing-function: ease-out;
-        -moz-animation-timing-function: ease-out;
+      transform: rotateZ(-9.06581deg);
+      -webkit-transform: rotateZ(-9.06581deg);
+      -moz-transform: rotateZ(-9.06581deg);
+      animation-timing-function: ease-out;
+      -webkit-animation-timing-function: ease-out;
+      -moz-animation-timing-function: ease-out;
     }
     69.44% {
-        transform: rotateZ(-5.66613deg);
-        -webkit-transform: rotateZ(-5.66613deg);
-        -moz-transform: rotateZ(-5.66613deg);
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      transform: rotateZ(-5.66613deg);
+      -webkit-transform: rotateZ(-5.66613deg);
+      -moz-transform: rotateZ(-5.66613deg);
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
     83.33% {
-        transform: rotateZ(0deg);
-        -webkit-transform: rotateZ(0deg);
-        -moz-transform: rotateZ(0deg);
-        animation-timing-function: ease-in-out;
-        -webkit-animation-timing-function: ease-in-out;
-        -moz-animation-timing-function: ease-in-out;
+      transform: rotateZ(0deg);
+      -webkit-transform: rotateZ(0deg);
+      -moz-transform: rotateZ(0deg);
+      animation-timing-function: ease-in-out;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
     }
     91.67% {
-        transform: rotateZ(-9.44566deg);
-        -webkit-transform: rotateZ(-9.44566deg);
-        -moz-transform: rotateZ(-9.44566deg);
-        animation-timing-function: ease-in-out;
-        -webkit-animation-timing-function: ease-in-out;
-        -moz-animation-timing-function: ease-in-out;
+      transform: rotateZ(-9.44566deg);
+      -webkit-transform: rotateZ(-9.44566deg);
+      -moz-transform: rotateZ(-9.44566deg);
+      animation-timing-function: ease-in-out;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
     }
     100% {
-        transform: rotateZ(0deg);
-        -webkit-transform: rotateZ(0deg);
-        -moz-transform: rotateZ(0deg);
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
+      transform: rotateZ(0deg);
+      -webkit-transform: rotateZ(0deg);
+      -moz-transform: rotateZ(0deg);
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
     }
 }
 @-webkit-keyframes gwd-gen-sz7ggwdanimation_gwd-keyframes {
     0% {
-        -webkit-transform: rotateZ(0deg);
-        -webkit-animation-timing-function: linear;
+      -webkit-transform: rotateZ(0deg);
+      -webkit-animation-timing-function: linear;
     }
     13.89% {
-        -webkit-transform: rotateZ(0deg);
-        -webkit-animation-timing-function: ease-in;
+      -webkit-transform: rotateZ(0deg);
+      -webkit-animation-timing-function: ease-in;
     }
     22.22% {
-        -webkit-transform: rotateZ(-9.90424deg);
-        -webkit-animation-timing-function: ease-out;
+      -webkit-transform: rotateZ(-9.90424deg);
+      -webkit-animation-timing-function: ease-out;
     }
     30.56% {
-        -webkit-transform: rotateZ(0deg);
-        -webkit-animation-timing-function: linear;
+      -webkit-transform: rotateZ(0deg);
+      -webkit-animation-timing-function: linear;
     }
     38.89% {
-        -webkit-transform: rotateZ(-3.97338deg);
-        -webkit-animation-timing-function: linear;
+      -webkit-transform: rotateZ(-3.97338deg);
+      -webkit-animation-timing-function: linear;
     }
     50% {
-        -webkit-transform: rotateZ(0deg);
-        -webkit-animation-timing-function: ease-in-out;
+      -webkit-transform: rotateZ(0deg);
+      -webkit-animation-timing-function: ease-in-out;
     }
     61.11% {
-        -webkit-transform: rotateZ(-9.06581deg);
-        -webkit-animation-timing-function: ease-out;
+      -webkit-transform: rotateZ(-9.06581deg);
+      -webkit-animation-timing-function: ease-out;
     }
     69.44% {
-        -webkit-transform: rotateZ(-5.66613deg);
-        -webkit-animation-timing-function: linear;
+      -webkit-transform: rotateZ(-5.66613deg);
+      -webkit-animation-timing-function: linear;
     }
     83.33% {
-        -webkit-transform: rotateZ(0deg);
-        -webkit-animation-timing-function: ease-in-out;
+      -webkit-transform: rotateZ(0deg);
+      -webkit-animation-timing-function: ease-in-out;
     }
     91.67% {
-        -webkit-transform: rotateZ(-9.44566deg);
-        -webkit-animation-timing-function: ease-in-out;
+      -webkit-transform: rotateZ(-9.44566deg);
+      -webkit-animation-timing-function: ease-in-out;
     }
     100% {
-        -webkit-transform: rotateZ(0deg);
-        -webkit-animation-timing-function: linear;
+      -webkit-transform: rotateZ(0deg);
+      -webkit-animation-timing-function: linear;
     }
 }
 @-moz-keyframes gwd-gen-sz7ggwdanimation_gwd-keyframes {
