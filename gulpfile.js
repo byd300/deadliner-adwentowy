@@ -1,3 +1,4 @@
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
@@ -50,4 +51,5 @@ gulp.task('default',function() {
     gulp.watch('src/css/**/*.css',['styles']).on('change', browserSync.reload);
     gulp.watch('src/js/**/*.js',['styles']).on('change', browserSync.reload);
     gulp.watch('src/**/*.html',['styles']).on('change', browserSync.reload);
+
 });
