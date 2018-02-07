@@ -11,12 +11,31 @@ body {
 
 }
 
+//global
+.img-rwd {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-fluid {
+  width: auto;
+  height: 100%;
+  color: $white;
+  font-weight: 300;
+  display: inline;
+}
 
 .no-padding {
 	padding-right: 0;
 	padding-left: 0;
 }
 
+.container-nopadding {
+    padding: 0;
+}
+
+//header
 .deadliner-header {
     height: 520px;
     padding: 0;
@@ -118,10 +137,6 @@ body {
 	display: none !important;
 }
 
-.container-nopadding {
-    padding: 0;
-}
-
 .callender {
 	padding-top:40px;
 	@include sm {
@@ -159,13 +174,11 @@ body {
   }
 }
 
+// caps on boxes
 .day-container {   
     margin-bottom: 25px;
     width: 165px;
     height: 130px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
     text-align: center;
     &__grey {
     	background-color: $grey;
@@ -197,7 +210,7 @@ body {
     }
 	&__data-number {
     font-size: 3.75rem;
-   	@include sm {
+   	@include lg {
         font-size: 5.7rem;
     }
 	}
@@ -206,12 +219,13 @@ body {
     }
 	&__data-month {
     font-size: 1.25rem;
-    @include sm {
+    @include lg {
         font-size: 1.5rem;
     }
 	}
 }
 
+// z-index for some boxes
 .day-img-11 {
 	z-index: 5;
 }
@@ -222,6 +236,7 @@ body {
   z-index: 7;
 }
 
+// elements around boxes
 .cap-on-box {
 	img {
 		position: absolute;
@@ -377,28 +392,6 @@ canvas {
   height: 100%;
 }
 
-footer {
-    color: black;
-    font-size: 14px;
-    text-transform: none;
-}
-
-.img-rwd {
-	width: 100%;
-  height: auto;
-  display: block;
-}
-
-.img-fluid {
-	width: auto;
-	height: 100%;
-	color: $white;
-	font-weight: 300;
-	display: inline;
-}
-
-
-
 @mixin clearfix() {
   &:before,
   &:after {
@@ -423,6 +416,8 @@ figure {
   margin: 0;
 }
 
+
+// advent cards
 .card {
 	background-color: $white;
 	float: left;
@@ -450,8 +445,6 @@ figure {
     height: 130px;
     position: absolute;
     top: 0;
-    // transform-origin: left center;
-    // transform-style: preserve-3d;
     transition: transform 0.2s;
     width: 100%;
     @include lg {
@@ -486,7 +479,6 @@ figure {
     height: 130px;
     left: 0;
     overflow: hidden;
-    // position: absolute;
     top: 0;
     width: 100%;
     @include lg {
@@ -519,36 +511,15 @@ figure {
 
 }
 
-.green {
-	background-color: #green;
+// footer
+footer {
+    color: black;
+    font-size: 14px;
+    text-transform: none;
 }
 
-.card-2 {
-  height: (100vw / 3);
-  width: (100vw / 3);
 
-  @media (max-width: 768px) {
-    height: (100vw / 1.5);
-    width: (100vw / 1.5);
-  }
-
-}
-
-.card-w-2 {
-  width: (100vw / 3);
-  @media (max-width: 768px) {
-    width: (100vw / 1.5);
-  }
-
-}
-
-.card-h-2 {
-  height: (100vw / 3);
-  @media (max-width: 768px) {
-    height: (100vw / 1.5);
-  }
-}
-
+//different shades of caps
 .card-grey {
 	figcaption {
 		background-color: $grey;
@@ -565,7 +536,6 @@ figure {
   	}
 	}
 }
-
 .card-grey-light {
 	figcaption {
 		background-color: $grey-light;
@@ -575,7 +545,7 @@ figure {
 	}
 }
 
-
+//snow animation
 #snow {
     background-color: transparent;
     background-image: url(http://wp.agens.no/smakebit/wp-content/themes/smakebiten/img/snow1.png), url(http://wp.agens.no/smakebit/wp-content/themes/smakebiten/img/snow2.png);
@@ -594,7 +564,6 @@ figure {
 }
 
 /*Keyframes*/
-
 @keyframes snow { 
     0% { background-position: 0px 0px, 0px 0px, 0px 0px }
     100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
@@ -616,7 +585,6 @@ figure {
     0% { background-position: 0px 0px, 0px 0px, 0px 0px }
     100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
 }
-
 
 
 

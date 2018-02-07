@@ -41,7 +41,9 @@ var bootstrap=function(t,e,n){"use strict";function i(t,e){for(var n=0;n<e.lengt
     if (month === 1,2,3,4,5,6,7,8,9,10,11,12) {
         for (var i = 0; i <= day; i++) {
             $('.day-' + i).addClass('active open');
+            $('.anima-' + i).addClass('slide-fwd-center-element');
         }
+        
         var $day = $('.day-' + day);
         $day.on('click', function() {
             $day.addClass('active');
@@ -49,8 +51,7 @@ var bootstrap=function(t,e,n){"use strict";function i(t,e){for(var n=0;n<e.lengt
     }
  
     $('.active').on('click', function() {
-        var $this = $(this);
-
+        var $this = $(this);    
         if ($this.hasClass('open')) {   
         } else {
             $this.addClass('open');
@@ -73,6 +74,9 @@ var bootstrap=function(t,e,n){"use strict";function i(t,e){for(var n=0;n<e.lengt
             }
         });
     });
+
+
+
 })();
 
 $(document).ready(function(){

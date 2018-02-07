@@ -18,7 +18,7 @@ gulp.task('styles', function() {
     gulp.src('src/css/**/*.css')
 		.pipe(concat('style.css'))
 		.pipe(gulp.dest('dist/css'));
-	return gulp.src(['src/js/jquery-slim.min.js', 'src/js/jquery.min.js', 'src/js/bootstrap.min.js', 'src/js/featherlight.min.js', 'src/js/featherlight.gallery.min.js', 'src/js/main.js'])
+	gulp.src(['src/js/jquery-slim.min.js', 'src/js/jquery.min.js', 'src/js/bootstrap.min.js', 'src/js/featherlight.min.js', 'src/js/featherlight.gallery.min.js', 'src/js/main.js'])
 		.pipe(concat('final.js'))
 		.pipe(gulp.dest('dist/js'));
 	// gulp.src('src/images/*')
